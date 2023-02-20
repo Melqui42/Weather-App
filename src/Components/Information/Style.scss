@@ -1,0 +1,121 @@
+.WeatherAppInformationHide {
+    width: 350px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 1rem;
+    opacity: 0;
+    transition: 0.3s;
+    visibility: hidden;
+    border-radius: 0.5rem;
+    background-color: #2a2e43;
+    box-shadow: 0rem 0rem 0.5rem 0.2rem #141726;
+
+    .Title {
+      gap: 1rem;
+      display: flex;
+      align-items: center;
+
+      h1 {
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      button {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        color: white;
+        padding: 0.2rem;
+        transition: 0.3s;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        background-color: #454f63;
+        box-shadow: 0rem 0.2rem 0.5rem 0.2rem #1417264f;
+
+        &:hover {
+          background-color: #665eff;
+        }
+      }
+    }
+
+    .Container {
+      gap: 1rem;
+      display: flex;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      flex-direction: column;
+      border-top: 3px solid #31364b;
+
+      .Location {
+        gap: 0.5rem;
+        display: flex;
+        color: white;
+        align-items: center;
+
+        .Icon {
+          color: white;
+        }
+      }
+
+      .Content {
+        display: flex;
+        justify-content: space-between;
+
+        .Climete {
+          gap: 1rem;
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 60px;
+          }
+
+          h1 {
+            color: white;
+            font-size: 2.2rem;
+          }
+        }
+
+        .Information {
+          gap: 0.5rem;
+          display: flex;
+          flex-direction: column;
+
+          p {
+            color: white;
+          }
+
+          .List {
+            gap: 1rem;
+            display: flex;
+
+            .Item {
+              gap: 0.5rem;
+              display: flex;
+              color: white;
+              align-items: center;
+
+              &:nth-child(1) .Icon {
+                color: #3b97ff;
+              }
+
+              &:nth-child(2) .Icon {
+                color: #bababa;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .WeatherAppInformationShow {
+    @extend .WeatherAppInformationHide;
+    opacity: 1;
+    visibility: visible;
+  }
